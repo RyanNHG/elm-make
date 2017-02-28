@@ -186,7 +186,7 @@ createFooter debugMode canonicalInterfaces rootModules =
         (List.sort (map TMP.simplifyModuleName rootModules))
   in
     Text.pack $
-      "var Elm = {};\n"
+      "this.Elm = {};\n"
       ++ unlines exportChunks
       ++ footerClose
 
